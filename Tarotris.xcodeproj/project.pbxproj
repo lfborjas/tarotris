@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BC9FC8A1C038E1E003FE88E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9FC891C038E1E003FE88E /* AppDelegate.swift */; };
+		3BC9FC8C1C038E1E003FE88E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3BC9FC8B1C038E1E003FE88E /* GameScene.sks */; };
+		3BC9FC8E1C038E1E003FE88E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9FC8D1C038E1E003FE88E /* GameScene.swift */; };
+		3BC9FC901C038E1E003FE88E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9FC8F1C038E1E003FE88E /* GameViewController.swift */; };
+		3BC9FC931C038E1E003FE88E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC9FC911C038E1E003FE88E /* Main.storyboard */; };
+		3BC9FC951C038E1E003FE88E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BC9FC941C038E1E003FE88E /* Assets.xcassets */; };
+		3BC9FC981C038E1E003FE88E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC9FC961C038E1E003FE88E /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3BC9FC861C038E1E003FE88E /* Tarotris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tarotris.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BC9FC891C038E1E003FE88E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3BC9FC8B1C038E1E003FE88E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		3BC9FC8D1C038E1E003FE88E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		3BC9FC8F1C038E1E003FE88E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		3BC9FC921C038E1E003FE88E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BC9FC941C038E1E003FE88E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BC9FC971C038E1E003FE88E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BC9FC991C038E1E003FE88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BC9FC831C038E1E003FE88E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BC9FC7D1C038E1E003FE88E = {
+			isa = PBXGroup;
+			children = (
+				3BC9FC881C038E1E003FE88E /* Tarotris */,
+				3BC9FC871C038E1E003FE88E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3BC9FC871C038E1E003FE88E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BC9FC861C038E1E003FE88E /* Tarotris.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BC9FC881C038E1E003FE88E /* Tarotris */ = {
+			isa = PBXGroup;
+			children = (
+				3BC9FC891C038E1E003FE88E /* AppDelegate.swift */,
+				3BC9FC8B1C038E1E003FE88E /* GameScene.sks */,
+				3BC9FC8D1C038E1E003FE88E /* GameScene.swift */,
+				3BC9FC8F1C038E1E003FE88E /* GameViewController.swift */,
+				3BC9FC911C038E1E003FE88E /* Main.storyboard */,
+				3BC9FC941C038E1E003FE88E /* Assets.xcassets */,
+				3BC9FC961C038E1E003FE88E /* LaunchScreen.storyboard */,
+				3BC9FC991C038E1E003FE88E /* Info.plist */,
+			);
+			path = Tarotris;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BC9FC851C038E1E003FE88E /* Tarotris */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BC9FC9C1C038E1E003FE88E /* Build configuration list for PBXNativeTarget "Tarotris" */;
+			buildPhases = (
+				3BC9FC821C038E1E003FE88E /* Sources */,
+				3BC9FC831C038E1E003FE88E /* Frameworks */,
+				3BC9FC841C038E1E003FE88E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tarotris;
+			productName = Tarotris;
+			productReference = 3BC9FC861C038E1E003FE88E /* Tarotris.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BC9FC7E1C038E1E003FE88E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Luis Borjas";
+				TargetAttributes = {
+					3BC9FC851C038E1E003FE88E = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 3BC9FC811C038E1E003FE88E /* Build configuration list for PBXProject "Tarotris" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3BC9FC7D1C038E1E003FE88E;
+			productRefGroup = 3BC9FC871C038E1E003FE88E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BC9FC851C038E1E003FE88E /* Tarotris */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BC9FC841C038E1E003FE88E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BC9FC8C1C038E1E003FE88E /* GameScene.sks in Resources */,
+				3BC9FC981C038E1E003FE88E /* LaunchScreen.storyboard in Resources */,
+				3BC9FC951C038E1E003FE88E /* Assets.xcassets in Resources */,
+				3BC9FC931C038E1E003FE88E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BC9FC821C038E1E003FE88E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BC9FC8E1C038E1E003FE88E /* GameScene.swift in Sources */,
+				3BC9FC901C038E1E003FE88E /* GameViewController.swift in Sources */,
+				3BC9FC8A1C038E1E003FE88E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3BC9FC911C038E1E003FE88E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BC9FC921C038E1E003FE88E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3BC9FC961C038E1E003FE88E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BC9FC971C038E1E003FE88E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3BC9FC9A1C038E1E003FE88E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BC9FC9B1C038E1E003FE88E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3BC9FC9D1C038E1E003FE88E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tarotris/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lfborjas.Tarotris;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3BC9FC9E1C038E1E003FE88E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tarotris/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lfborjas.Tarotris;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BC9FC811C038E1E003FE88E /* Build configuration list for PBXProject "Tarotris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BC9FC9A1C038E1E003FE88E /* Debug */,
+				3BC9FC9B1C038E1E003FE88E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BC9FC9C1C038E1E003FE88E /* Build configuration list for PBXNativeTarget "Tarotris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BC9FC9D1C038E1E003FE88E /* Debug */,
+				3BC9FC9E1C038E1E003FE88E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BC9FC7E1C038E1E003FE88E /* Project object */;
+}
