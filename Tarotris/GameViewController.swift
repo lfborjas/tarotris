@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, TarotrisDelegate {
     
     var scene: GameScene!
     var tarotris:Tarotris!
@@ -43,11 +43,13 @@ class GameViewController: UIViewController {
         
         scene.tick = didTick
         tarotris = Tarotris()
+        tarotris.delegate = self
         tarotris.beginGame()
         
         //present the scene
         skView.presentScene(scene)
         
+        /*
         scene.addPreviewShapeToScene(tarotris.nextShape!) {
             self.tarotris.nextShape?.moveTo(StartingColumn, row: StartingRow)
             self.scene.movePreviewShape(self.tarotris.nextShape!) {
@@ -56,6 +58,7 @@ class GameViewController: UIViewController {
                 self.scene.addPreviewShapeToScene(nextShapes.nextShape!){}
             }
         }
+        */
     }
 
     /* FIXME: added by XCode when creating from Game template
@@ -86,7 +89,50 @@ class GameViewController: UIViewController {
     }
     
     func didTick() {
-        tarotris.fallingShape?.lowerShapeByOneRow()
-        scene.redrawShape(tarotris.fallingShape!, completion: {})
+        tarotris.letShapeFall()
+    }
+    
+    func nextShape() {
+        let newShapes = tarotris.newShape()
+        guard let fallingShape = newShapes.fallingShape else {
+            return
+        }
+        self.scene.addPreviewShapeToScene(newShapes.nextShape!){}
+        self.scene.movePreviewShape(fallingShape){
+            self.view.userInteractionEnabled = true
+            self.scene.startTicking()
+        }
+    }
+    
+    func gameDidBegin(tarotris: Tarotris) {
+        if tarotris.nextShape != nil && tarotris.nextShape!.blocks[0].sprite == nil {
+            scene.addPreviewShapeToScene(tarotris.nextShape!){
+                self.nextShape()
+            }
+        } else {
+            nextShape()
+        }
+    }
+    
+    func gameDidEnd(tarotris: Tarotris) {
+        view.userInteractionEnabled = false
+        scene.stopTicking()
+    }
+    
+    func gameDidLevelUp(tarotris: Tarotris) {
+        
+    }
+    
+    func gameShapeDidDrop(tarotris: Tarotris) {
+        
+    }
+    
+    func gameShapeDidLand(tarotris: Tarotris) {
+        scene.stopTicking()
+        nextShape()
+    }
+    
+    func gameShapeDidMove(tarotris: Tarotris) {
+        scene.redrawShape(tarotris.fallingShape!){}
     }
 }
