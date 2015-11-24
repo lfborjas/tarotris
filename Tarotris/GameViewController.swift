@@ -13,6 +13,8 @@ class GameViewController: UIViewController, TarotrisDelegate, UIGestureRecognize
     
     var scene: GameScene!
     var tarotris:Tarotris!
+    
+    var panPointReference:CGPoint?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,6 +96,23 @@ class GameViewController: UIViewController, TarotrisDelegate, UIGestureRecognize
    
     @IBAction func didTap(sender: UITapGestureRecognizer) {
         tarotris.rotateShape()
+    }
+    
+    @IBAction func didPan(sender: UIPanGestureRecognizer) {
+        let currentPoint = sender.translationInView(self.view)
+        if let originalPoint = panPointReference {
+            if abs(currentPoint.x - originalPoint.x) > (BlockSize * 0.9) {
+                if sender.velocityInView(self.view).x > CGFloat(0) {
+                    tarotris.moveShapeRight()
+                    panPointReference = currentPoint
+                } else {
+                    tarotris.moveShapeLeft()
+                    panPointReference = currentPoint
+                }
+            }
+        } else if sender.state == .Began {
+            panPointReference = currentPoint
+        }
     }
     
     func nextShape() {
