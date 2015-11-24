@@ -8,10 +8,14 @@
 
 import SpriteKit
 
+
+// slowest speed at which shapes will travel: every 600 ms
+// the shape will descend one row
 let TickLengthLevelOne = NSTimeInterval(600)
 
 class GameScene: SKScene {
     
+    //optional closure that takes no parameters and returns nothing
     var tick:(() -> ())?
     var tickLengthMillis = TickLengthLevelOne
     var lastTick:NSDate?
@@ -70,14 +74,29 @@ class GameScene: SKScene {
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
         
+        // if lastTick is nil, the game is paused and not
+        // reporting ticks, so nothing to do
         guard let lastTick = lastTick else {
             return
         }
         
+        // times -1000 to get a *positive* ms value
         let timePassed = lastTick.timeIntervalSinceNow * -1000.0
         if timePassed > tickLengthMillis {
             self.lastTick = NSDate()
+            //shorthand for checking if tick is present and calling it if so
             tick?()
         }
+    }
+    
+    // these functions allow other classes to manipulate tickint
+    // that way we can pause it in key moments
+    
+    func startTicking(){
+        lastTick = NSDate()
+    }
+    
+    func stopTicking(){
+        lastTick = nil
     }
 }
