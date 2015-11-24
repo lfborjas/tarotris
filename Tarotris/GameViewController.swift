@@ -9,7 +9,7 @@
 import UIKit
 import SpriteKit
 
-class GameViewController: UIViewController, TarotrisDelegate {
+class GameViewController: UIViewController, TarotrisDelegate, UIGestureRecognizerDelegate {
     
     var scene: GameScene!
     var tarotris:Tarotris!
@@ -90,6 +90,10 @@ class GameViewController: UIViewController, TarotrisDelegate {
     
     func didTick() {
         tarotris.letShapeFall()
+    }
+   
+    @IBAction func didTap(sender: UITapGestureRecognizer) {
+        tarotris.rotateShape()
     }
     
     func nextShape() {
