@@ -55,7 +55,8 @@ class Block: Hashable, CustomStringConvertible {
     }
     
     var hashValue: Int {
-        return self.column ^ self.row 
+        // XOR of col and row to ensure uniqueness
+        return self.column ^ self.row
     }
     
     var description: String {
