@@ -12,6 +12,7 @@ import SpriteKit
 class GameViewController: UIViewController {
     
     var scene: GameScene!
+    var tarotris:Tarotris!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +41,21 @@ class GameViewController: UIViewController {
         scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .AspectFill
         
+        scene.tick = didTick
+        tarotris = Tarotris()
+        tarotris.beginGame()
+        
         //present the scene
         skView.presentScene(scene)
+        
+        scene.addPreviewShapeToScene(tarotris.nextShape!) {
+            self.tarotris.nextShape?.moveTo(StartingColumn, row: StartingRow)
+            self.scene.movePreviewShape(self.tarotris.nextShape!) {
+                let nextShapes = self.tarotris.newShape()
+                self.scene.startTicking()
+                self.scene.addPreviewShapeToScene(nextShapes.nextShape!){}
+            }
+        }
     }
 
     /* FIXME: added by XCode when creating from Game template
@@ -69,5 +83,10 @@ class GameViewController: UIViewController {
 
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    func didTick() {
+        tarotris.fallingShape?.lowerShapeByOneRow()
+        scene.redrawShape(tarotris.fallingShape!, completion: {})
     }
 }

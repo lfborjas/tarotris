@@ -25,6 +25,7 @@
 		3BC9FCB21C04357E003FE88E /* JShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9FCB11C04357E003FE88E /* JShape.swift */; };
 		3BC9FCB41C04359B003FE88E /* SShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9FCB31C04359B003FE88E /* SShape.swift */; };
 		3BC9FCB61C0435B6003FE88E /* ZShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9FCB51C0435B6003FE88E /* ZShape.swift */; };
+		3BC9FCB81C04388C003FE88E /* Tarotris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC9FCB71C04388C003FE88E /* Tarotris.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		3BC9FCB11C04357E003FE88E /* JShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JShape.swift; sourceTree = "<group>"; };
 		3BC9FCB31C04359B003FE88E /* SShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SShape.swift; sourceTree = "<group>"; };
 		3BC9FCB51C0435B6003FE88E /* ZShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZShape.swift; sourceTree = "<group>"; };
+		3BC9FCB71C04388C003FE88E /* Tarotris.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tarotris.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				3BC9FC8D1C038E1E003FE88E /* GameScene.swift */,
 				3BC9FCA51C0402A5003FE88E /* Block.swift */,
 				3BC9FCA71C0424E3003FE88E /* Shape.swift */,
+				3BC9FCB71C04388C003FE88E /* Tarotris.swift */,
 				3BC9FCA91C04336E003FE88E /* SquareShape.swift */,
 				3BC9FCAB1C0434C9003FE88E /* TShape.swift */,
 				3BC9FCAD1C04352B003FE88E /* LineShape.swift */,
@@ -184,6 +187,7 @@
 				3BC9FCA81C0424E3003FE88E /* Shape.swift in Sources */,
 				3BC9FCA41C03F4AC003FE88E /* Array2D.swift in Sources */,
 				3BC9FCAE1C04352B003FE88E /* LineShape.swift in Sources */,
+				3BC9FCB81C04388C003FE88E /* Tarotris.swift in Sources */,
 				3BC9FCB41C04359B003FE88E /* SShape.swift in Sources */,
 				3BC9FCAC1C0434C9003FE88E /* TShape.swift in Sources */,
 				3BC9FCA61C0402A5003FE88E /* Block.swift in Sources */,
