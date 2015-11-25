@@ -98,6 +98,10 @@ class GameViewController: UIViewController, TarotrisDelegate, UIGestureRecognize
         tarotris.rotateShape()
     }
     
+    @IBAction func didSwipe(sender: UISwipeGestureRecognizer) {
+        tarotris.dropShape()
+    }
+    
     @IBAction func didPan(sender: UIPanGestureRecognizer) {
         let currentPoint = sender.translationInView(self.view)
         if let originalPoint = panPointReference {
@@ -113,6 +117,30 @@ class GameViewController: UIViewController, TarotrisDelegate, UIGestureRecognize
         } else if sender.state == .Began {
             panPointReference = currentPoint
         }
+    }
+    
+    /*
+      GameViewController will implement an optional delegate method found in UIGestureRecognizerDelegate which will allow each gesture recognizer to work in tandem with the others. At times, a gesture recognizer may collide with another.
+    */
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+    /*
+     Sometimes when swiping down, a pan gesture may occur simultaneously with a swipe gesture. In order for these recognizers to relinquish priority, we will implement another optional delegate method. The code performs is conditionals. These conditionals check whether the generic UIGestureRecognizer parameters is of the specific types of recognizers we expect to see. If the check succeeds, we execute the code block.
+    */
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailByGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        if gestureRecognizer is UISwipeGestureRecognizer {
+            if otherGestureRecognizer is UIPanGestureRecognizer {
+                return true
+            }
+        } else if gestureRecognizer is UIPanGestureRecognizer {
+            if otherGestureRecognizer is UITapGestureRecognizer {
+                return true
+            }
+        }
+        
+        return false
     }
     
     func nextShape() {
@@ -147,6 +175,10 @@ class GameViewController: UIViewController, TarotrisDelegate, UIGestureRecognize
     }
     
     func gameShapeDidDrop(tarotris: Tarotris) {
+        scene.stopTicking()
+        scene.redrawShape(tarotris.fallingShape!) {
+            tarotris.letShapeFall()
+        }
         
     }
     
