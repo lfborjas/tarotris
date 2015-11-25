@@ -159,6 +159,10 @@ class GameViewController: UIViewController, TarotrisDelegate, UIGestureRecognize
     }
     
     func gameDidBegin(tarotris: Tarotris) {
+        levelLabel.text = "\(tarotris.level)"
+        scoreLabel.text = "\(tarotris.score)"
+        scene.tickLengthMillis = TickLengthLevelOne
+        
         if tarotris.nextShape != nil && tarotris.nextShape!.blocks[0].sprite == nil {
             scene.addPreviewShapeToScene(tarotris.nextShape!){
                 self.nextShape()
@@ -171,10 +175,20 @@ class GameViewController: UIViewController, TarotrisDelegate, UIGestureRecognize
     func gameDidEnd(tarotris: Tarotris) {
         view.userInteractionEnabled = false
         scene.stopTicking()
+        //scene.playSound("gameover")
+        scene.animateCollapsingLines(tarotris.removeAllBlocks(), fallenBlocks: Array<Array<Block>>()){
+            tarotris.beginGame()
+        }
     }
     
     func gameDidLevelUp(tarotris: Tarotris) {
-        
+        levelLabel.text = "\(tarotris.level)"
+        if scene.tickLengthMillis >= 100 {
+            scene.tickLengthMillis -= 100
+        } else if scene.tickLengthMillis > 50 {
+            scene.tickLengthMillis -= 50
+        }
+        //scene.playSound("levelup")
     }
     
     func gameShapeDidDrop(tarotris: Tarotris) {
@@ -182,12 +196,22 @@ class GameViewController: UIViewController, TarotrisDelegate, UIGestureRecognize
         scene.redrawShape(tarotris.fallingShape!) {
             tarotris.letShapeFall()
         }
-        
+        //scene.playSound("drop")
     }
     
     func gameShapeDidLand(tarotris: Tarotris) {
         scene.stopTicking()
-        nextShape()
+        self.view.userInteractionEnabled = false
+        let removedLines = tarotris.removeCompletedLines()
+        if removedLines.linesRemoved.count > 0 {
+            self.scoreLabel.text = "\(tarotris.score)"
+            scene.animateCollapsingLines(removedLines.linesRemoved, fallenBlocks: removedLines.fallenBlocks){
+                self.gameShapeDidLand(tarotris)
+            }
+            //scene.playSound("bomb")
+        } else {
+            nextShape()
+        }
     }
     
     func gameShapeDidMove(tarotris: Tarotris) {
